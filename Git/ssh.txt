@@ -1,0 +1,25 @@
+Как генерировать ключ:
+https://learn.microsoft.com/ru-ru/azure/virtual-machines/linux/create-ssh-keys-detailed
+
+Пример:
+ssh-keygen -t rsa -b 4096 -C "my_mail@gmail.com"
+
+
+Как настроить на удалённом репозитории:
+https://habr.com/ru/articles/755036/
+https://www.youtube.com/watch?v=R09UNc4ZNi4
+
+
+Чтобы всё работало нормально, настраиваем(создаём если нет) файл:
+пример:
+~\.ssh\config
+###### Start file #####
+Host gitverse.ru
+    HostName gitverse.ru
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+Host gitlab.com
+    HostName gitlab.com
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+#####  End file  #####

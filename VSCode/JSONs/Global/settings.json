@@ -1,0 +1,25 @@
+{
+    "files.autoSave": "afterDelay", //автосохранение
+    //"editor.accessibilityPageSize": 20, //Не понятно для чего? Управляет числом строк в редакторе, которые могут быть прочитаны средством чтения с экрана за один раз.
+    "window.zoomLevel": 0,  //Настройте уровень масштабирования по умолчанию для всех окон. любое положительное или отрицательное число(по умолчанию 0)
+    "editor.fontSize": 22, //Определяет размер шрифта в пикселях
+    "code-runner.runInTerminal": true, //Запуск кода в терминале
+    "editor.mouseWheelZoom": true, //Указывает тему значков файлов
+	"terminal.integrated.defaultProfile.windows": "Command Prompt",  //Профиль терминала по умолчанию
+    "editor.minimap.enabled": false,  //Определяет, отображается ли мини-карта
+    "terminal.integrated.cursorStyle": "underline", //Управляет стилем курсора терминала,
+    "terminal.integrated.cursorBlinking": true, //Определяет, мигает ли курсор терминала.
+    //"explorer.autoReveal": false, //При перемещении по верхним закладкам, автоперемещение в дереве
+    "explorer.compactFolders": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-windows": "C:\\Users\\AVV\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.colorTheme": "Aura Dark",
+    "gigacode.inlineColor": "pink",
+    "workbench.colorCustomizations": {
+        "editorGhostText.foreground": "#b873b0"
+    }, 
+}

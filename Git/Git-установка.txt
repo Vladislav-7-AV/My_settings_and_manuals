@@ -1,0 +1,23 @@
+Пример как установить GIT:
+https://www.youtube.com/watch?v=cfookORo0M4&t=0s
+
+--
+Для Windows:
+На шаге:
+Choosing HTTPS transport backend
+Выбираем настройку:
+Use native Windows Secure Channel library
+
+--
+Проверяем что GIT установился:
+Для Windows:
+win+r
+cmd
+
+Далее:
+В коммандной строке или консоли Linux ввводим:
+git -v
+
+Смотрим настройки:
+git config --list
+

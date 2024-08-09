@@ -1,0 +1,64 @@
+ИЗ ФАЙЛА, если не доступен интернет или репозиторий:
+Библиотеки качаем отсюда:
+https://pypi.org
+
+ВАЖНО!!! проверяй совместимость библиотек pip с установленной версией Python!!!
+
+1) вы можете установить tarball, не извлекая его первым. Просто перейдите в каталог, содержащий ваши из командной строки и введите следующую команду:
+pip install my-tarball-file-name.tar.gz
+--
+Примеры:
+pip install transliterate-1.10.2.tar.gz
+pip install C:\Users\__UserFolder__\Downloads\python-pptx-0.6.21.tar.gz
+
+pip install numpy-1.19.5-cp39-cp39-win_amd64.whl
+--
+
+
+2) или вы можете распаковать архив и использовать setup.py непосредственно с pip или python:
+python setup.py install
+
+
+ИЗ ИНТЕРНЕТА:
+3) Обновлениее из репозитория pip:
+pip install --upgrade пакет
+пример: pip install --upgrade pyspark
+
+---
+Пакетная установка:
+
+Чтобы получить список пакетов в проекте выполняем команду
+pip list
+Сохраняем в фаил:
+pip list --format=columns > C:\Users\__UserFolder__\Documents\Python\Lib\lib_py_now.txt
+
+В окружении:
+pip freeze
+
+
+Для записи вывода в requirements.txt дополняем следующим образом:
+pip freeze requirements.txt
+либо
+pip freeze > requirements.txt
+
+
+Установка библиотек из requirements.txt:
+полная команда:
+py -m pip install -r requirements.txt
+сокрашённая:
+pip install -r /path/to/requirements.txt
+pip install -r requirements.txt
+--
+
+
+Как установить модули, если возникает ошибка сертификата:
+https://qna.habr.com/q/941897
+
+https://stackoverflow.com/questions/25981703/pip-install-fails-with-connection-error-ssl-certificate-verify-failed-certi/29751768#29751768
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org <package_name>
+
+Пример:
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pyspark
+
+Обновить pip:
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --upgrade pip

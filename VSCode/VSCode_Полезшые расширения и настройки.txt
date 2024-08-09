@@ -1,0 +1,183 @@
+Расширения для интерфейса vsCode:
+Russian Language Pack for Visual Studio Code -> MS: руссифицирует vsCode
+
+--
+Расширения для запуска кода:
+Python -> MS: сам Python
+Python Debugger -> MS: Расширение для дебагинга кода
+.Run -> позваляет запускать код
+
+--
+Расширения для Jupyter (если используешь Jupyter просто установи их все) MS: 
+Jupyter
+Jupyter Cell Tags
+Jupyter Keymap
+Jupyter Slide Show
+Jupyter Notebook Renderers
+
+--
+Data Wrangler -  MS: Надстройка над pandas генерирует код на основе филтров и пр.
+--
+
+Другие полезные Расширения:
+
+Подсветка кода & темы:
+indent-rainbow -> подсветка отступов
+Better Comments -> подсветка комментариев
+Pylint -> MS: для анализа кода на различные ошибки(исключение ошибок живёт в файле .pylintrc)
+Color the tag name -> подсвечивает вложннные теги разными цветами
+Material Icon Theme -> показывает тематические иконки файлов
+GitHub Theme - тема которая мне нравиться: GitHub Dark Default
+Aura Theme - тема которая мне нравиться: Aura Dark(только надо поменять в settings.json цвет папок и файлов из .gitignore на "gitDecoration.ignoredResourceForeground": "#526881", а то их очень плохо видно в родной теме)
+python-string-sql - если в тройных кавычках кода python в первой строке указать --sql то sql код будет подсвечен
+
+
+Авто дополнение кода:
+Pylance -> MS: это языковой сервер, обеспечивающий быстрый и точный анализ кода для Python. Он использует машинное обучение, чтобы улучшить завершение кода, выдавать диагностику и справочную информацию при наведении на код.
+IntelliCode -> MS: ИИ подсказчик кода(аналог Pylance)
+Path Intellisense -> автоподстановка пути к файлу
+GigaCode - ИИ подсказчик кода от СБЕРа, ставитьия из .vsix файла, ссылка на скачивание: https://gigacode.ru/#/instruction/961d9cc0-98c5-11ee-b9d1-0242ac120002/VSCode
+
+
+Авто формат и подсветка кода:
+Prettier - Code formatter -> автоформатирование кода (JavaScript; TypeScript; Flow; JSX; JSON; CSS; SCSS; Less; HTML; Vue; Angular HANDLEBARS; Ember; Glimmer; GraphQL; Markdown; YAML)
+json - Это расширение добавляет поддержку JSON для Visual Studio Code.
+
+
+Docker:
+Docker -> MS: интеграция vsCode с Docker
+Dev Containers -> MS: Расширение позволяет использовать контейнер Docker в качестве полнофункциональной среды разработки. Независимо от того, выполняете ли вы развертывание в контейнерах или нет, контейнеры представляют собой отличную среду разработки
+YAML - Предоставляет комплексную поддержку языка YAML для Visual Studio Code через yaml-language-server со встроенной поддержкой синтаксиса Kubernetes.
+
+
+Git:
+Git Graph - графическое отображение веток Git
+Git History - История Git, поиск и многое другое (включая git log )
+Settings Sync -> синхронизация настроек vsCode с GIT (поищи аналог т.к. данная версия уже не поддерживаеться)
+
+
+WEB:
+Live server -> Локальный WEB-Server
+Live Preview -> MS: Локальный WEB-Server
+
+
+Прочее:
+Project Manager -> удобный плагин управления проектами
+Vscode Google Translate -> перевод текста в vsCode
+Code Spell Checker -> проверка орфографии
+Russian - Code Spell Checker  -> проверка орфографии русский язык(должен установлен Code Spell Checker)
+WSL -> MS: Расширение позволяет использовать VS Code в Windows для создания приложений Linux, которые работают в подсистеме Windows для Linux (WSL).
+Rainbow CSV - поддержка CSV файлов в VS Code
+
+
+--
+Где живёт vsCode по умолчанию:
+Чтобы его полностью удалить и почистить все настройки, удаляем его из: Панель управления - control
+А также удаляем папки:
+Windows:
+C:\Users\__UserFolder__\.vscode\
+C:\Users\__UserFolder__\AppData\Roaming\Code\
+
+Linux:
+Пока неизвестно, ищи в гугле
+
+
+--
+Полезные настройки для меня:
+
+Глобальные настройки:
+
+Живут по умолчанию:
+Win:
+C:\Users\__UserFolder__\AppData\Roaming\Code\User\settings.json
+
+Linux:
+пока неизвестно, ищи в гугле
+
+//------- start json file ------- 
+{
+    "files.autoSave": "afterDelay", //автосохранение
+    //"editor.accessibilityPageSize": 20, //Не понятно для чего? Управляет числом строк в редакторе, которые могут быть прочитаны средством чтения с экрана за один раз.
+    "window.zoomLevel": 0,  //Настройте уровень масштабирования по умолчанию для всех окон. любое положительное или отрицательное число(по умолчанию 0)
+    "editor.fontSize": 22, //Определяет размер шрифта в пикселях
+    "code-runner.runInTerminal": true, //Запуск кода в терминале
+    "editor.mouseWheelZoom": true, //Указывает тему значков файлов
+	"terminal.integrated.defaultProfile.windows": "Command Prompt",  //Профиль терминала по умолчанию
+    "editor.minimap.enabled": false,  //Определяет, отображается ли мини-карта
+    "terminal.integrated.cursorStyle": "underline", //Управляет стилем курсора терминала,
+    "terminal.integrated.cursorBlinking": true, //Определяет, мигает ли курсор терминала.
+    //"explorer.autoReveal": false, //При перемещении по верхним закладкам, автоперемещение в дереве
+    "explorer.compactFolders": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.colorTheme": "Aura Dark",
+    "gigacode.inlineColor": "pink",
+    "workbench.colorCustomizations": {
+        "editorGhostText.foreground": "#b873b0"
+    }, 
+}
+//------- end json file -------
+
+
+
+Также некоторые настройки внешнего вида vsCode живут тут:
+C:\Users\__UserFolder__\AppData\Roaming\Code\User\globalStorage\storage.json
+
+Локальные настройки:
+Для конкретного проекта(имеют наивысший приоритет над глобальными):
+
+Живут в папке проекта:
+путь к папке проекта\.vscode\settings.json
+Пример Win:
+C:\Users\__UserFolder__\Documents\Prog\Code_sobes_vs\.vscode\settings.json
+Пример Linux:
+пока нет примера
+
+//------- start json file ------- 
+{
+    "git.autoRepositoryDetection": "subFolders",
+    "breadcrumbs.enabled": true,
+
+    "python.languageServer": "Pylance",
+        // Pylance settings:
+        "python.analysis.typeCheckingMode": "off",
+        "python.analysis.diagnosticMode": "openFilesOnly",
+        "python.analysis.autoSearchPaths": true,
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.completeFunctionParens": true,
+        "python.analysis.inlayHints.variableTypes": true,  //аннотация типов 
+        "python.analysis.inlayHints.functionReturnTypes": true,  //аннотация типов
+        "python.analysis.importFormat": "absolute",
+        "python.analysis.enablePytestSupport": true,
+        "python.analysis.indexing": true,
+        // Pylance settings END
+    "workbench.colorCustomizations": {
+        "gitDecoration.ignoredResourceForeground": "#526881",
+    }, 
+    // Настройка конкретной библиотеки в данном случае django
+//    "python.analysis.packageIndexDepths": [
+//        {
+//            "name": "django",
+//            "depth": 3,
+//            "includeAllSymbols": true
+//        }
+//    ],
+}
+//------- end json file -------
+
+
+
+--
+Сниппеты:
+Emmet - https://docs.emmet.io/ -> автогенерация (по умолчанию: HTML, CSS) кода (встроена в vsCode)
+
+Пример: 
+Набираем: div>ul>li и жмём Tab
+
+Настройки живут: Управление(шестерёнка) -> Пользовательские фрагменты кода -> дальше выбираем либо язык кода либо глобальные настройки
+
+Подробнее: 
+https://www.youtube.com/watch?v=nxCLXMBl4e4&t=1938s
+--
+

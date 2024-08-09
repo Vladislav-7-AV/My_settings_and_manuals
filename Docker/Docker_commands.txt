@@ -1,0 +1,119 @@
+Основные комманды Docker:
+
+Images - это обоаз, только для чтения, из них создаються контейнеты
+Containers - это сущьность где работают приложения, на базе какого либо Images.
+
+docker --help -> выводит все комманды docker
+
+docker version -> версия Docker
+
+docker ps -a -> список запущенных и остановленных контейнеров
+docker ps -> список запущенных контейнеров
+
+docker images -> показывает список локальных образов, либо: docker image ls
+
+docker run hello-world -> где docker run(создаёт и запускает контейнер), hello-world - название образа
+docker run -it busybox ->   -i интерактивный,  -t терминал, либо слитно: -it
+
+docker attach - подключение к работающему контейнеру
+
+docker pull hello-world -> скачивает образ и сохраняет его локально(не устанавливая)
+
+docker start id_контейнера -> запуск имеющегося контейнера(не путать с docker run - он работаес с имеджами)
+docker stop id_контейнера -> остановить контейнер либо exit в терминале
+docker kill id_контейнера -> остановить контейнер жёстко (принудительно) если не работает docker stop
+docker rm id_контейнера(ов - через пробел) -> удаляет один или несколько контейнеров
+docker container prune -> удаляет все остановленные контейнеры
+
+
+docker exec -it id_контейнера bash -> запускает процесс (в данном случае bash) в запущенном контейнере
+#hostname -i -> ip address контейнера в оболочке bash
+
+
+Web server nginx:
+docker run nginx
+docker run -d nginx -> запуск в фоновом режиме
+docker container inspect id_контейнера -> выводит полную информацию о контейнере
+docker container inspect id_контейнера | grep ipaddress -> работает только в Linux
+#cd /usr/share/nginx/html
+#ls -l
+#cat index.html
+
+docker run -d --name my_contaner_name nginx -> запускаем контейнер с присвоением имени ему
+
+docker run -d -p 8080:80 nginx
+проверить в браузере: http://localhost:8080/
+
+docker run -v путь_к_локальной_папке:путь_к_папке_контейнера nginx - подкючает том с локальной папкой, заменяя содержимое в контейнере
+Пример:
+docker run -d -v C:\Users\__UserFolder__\Documents\Programming\WEB\Teach\Docker_1t\nginx:/usr/share/nginx/html -p 8080:80 --rm nginx
+
+--rm -> если добавить этот ключь контейнер самоудалиться после остановки
+
+Пример многострочной комманды(работает в Linux):
+docker run \
+-d \
+-v \
+C:\Users\__UserFolder__\Documents\Programming\WEB\Teach\Docker_1t\nginx:/usr/share/nginx/html \
+-p 8080:80 \
+--rm \
+nginx
+
+
+---
+Создание образов:
+
+- Для создания образа необходим Dockerfile
+- Обычно Dockerfile помещают в корне папки приложения
+- Dockerfile содержит инструкции по созданию образа
+- При создании образа желательно указывать имя и тег для образа 
+- На основании готового образа можно создать контейнеры
+
+Пример Dockerfile:
+--- start file ---
+FROM python:alpine
+
+WORKDIR /app
+
+COPY . .
+
+CMD [ "python" , "main.py" ]
+---- end file ----
+
+
+docker build . -t my-calendar
+docker run -it my-calendar
+
+
+
+Создание новой версии:
+docker build . -t my-calendar:2.0.0
+docker run -it my-calendar:2.0.0
+
+
+Docker compose:
+
+docker-compose up -> старт контейнеров прописанных в файле docker-compose.yml
+
+Пример docker-compose.yml:
+--- start file ---
+version: '3'
+
+services:
+  app:
+    build: ./app
+  mongo:
+    image: mongo
+---- end file ----
+
+docker-compose up -d -> старт контейнеров в фоне
+docker-compose down -> остановка и удаление запущенных контейнеров
+
+
+
+Если мы чтото изменили в приложении например код python его каждый раз после таких изменений необходимо ребилдить, так:
+
+docker-compose up --build
+docker-compose up -d --build
+
+docker logs id_контейнера -> посмотреть логи работы контейнера

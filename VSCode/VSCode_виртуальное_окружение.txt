@@ -1,0 +1,58 @@
+VSCode
+
+Установка виртуального окружения(ВО):
+python -m venv venv
+лучше:
+python -m venv venv --upgrade-deps
+--
+Если необходима вермия python отличная от системной, то:
+
+полный_путь\python.exe -m venv venv --upgrade-deps
+Пример:
+C:\Users\__UserFolder__\AppData\Local\Programs\Python\Python310\python.exe -m venv venv --upgrade-deps
+C:\Python\Python312\python.exe -m venv venv --upgrade-deps
+
+Активация ВО:
+Win:
+.\venv\Scripts\activate
+
+Linux:
+source venv/bin/activate
+
+
+Деактевировать ВО:
+deactivate
+
+Если необходимо удалить окружение:
+rm .\venv\
+далее: y
+
+P.s.:
+Ошибка:
+.\venv\Scripts\activate : Невозможно загрузить файл C:\path\venv\Scripts\activate.ps1, так как выполнение сценариев отключено в этой системе. 
+Для получения дополнительных сведений см. about_Execution_Policies по адресу http://go.microsoft.com/fwlink/?LinkID=135170.
+строка:1 знак:1
+.\venv\Scripts\activate
+~~~~~~~~~~~~~~~~~~~~~~~
+CategoryInfo          : Ошибка безопасности: (:) [], PSSecurityException
+FullyQualifiedErrorId : UnauthorizedAccess
+
+Решение проблемы:
+- Открываем терминал PowerShell от админа.
+- Вставляем и запускаем - Set-ExecutionPolicy RemoteSigned
+- На вопрос отвечаем - A
+
+
+--
+pip:
+При возникновении ошибки:
+WARNING: There was an error checking the latest version of pip. после обновления pip
+Надо почистить кеш, удалив папку: selfcheck
+Win:
+.\AppData\Local\pip\cache\selfcheck\
+
+Линукс
+Запустите эту команду в терминале.
+rm -r ~/.cache/pip/selfcheck/
+
+--

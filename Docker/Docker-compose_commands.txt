@@ -1,0 +1,55 @@
+docker-compose build — собрать проект
+docker-compose up -d — запустить проект
+docker-compose down — остановить проект
+docker-compose logs -f [service name] — посмотреть логи сервиса
+docker-compose ps — вывести список контейнеров
+docker-compose exec [service name] [command» — выполнить команду в контейнере
+docker-compose images — список образов
+
+Пример для PostgreSQL:
+https://habr.com/ru/articles/823816/
+#####Start docker-compose.yml##### 
+#version: '3.9' #Для последней версии docker версию указывать не надо
+
+services:
+  postgres:
+    image: postgres: postgres:16.3-alpine #latest - если необходима последняя версия
+    container_name: pg16_3
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: db_pg
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data/pgdata
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    command: >
+      postgres -c max_connections=1000
+               -c shared_buffers=256MB
+               -c effective_cache_size=768MB
+               -c maintenance_work_mem=64MB
+               -c checkpoint_completion_target=0.7
+               -c wal_buffers=16MB
+               -c default_statistics_target=100
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres_user -d postgres_db" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+
+volumes:
+  pgdata:
+    driver: local
+#####End docker-compose.yml#####
