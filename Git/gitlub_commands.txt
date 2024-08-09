@@ -10,7 +10,8 @@ git add .
 git commit -m "First commit"
 
 
-git push --set-upstream origin_gl
+git push --set-upstream origin_gl main
+main при необходимости меняем на master
 
 git push --set-upstream origin main
 
