@@ -16,7 +16,7 @@ Jupyter Slide Show
 Jupyter Notebook Renderers
 
 --
-Data Wrangler -  MS: Надстройка над pandas генерирует код на основе филтров и пр.
+Data Wrangler -> MS: Надстройка над pandas генерирует код на основе филтров и пр.
 --
 
 Другие полезные Расширения:
@@ -27,38 +27,40 @@ Better Comments -> подсветка комментариев
 Pylint -> MS: для анализа кода на различные ошибки(исключение ошибок живёт в файле .pylintrc)
 Color the tag name -> подсвечивает вложннные теги разными цветами
 Material Icon Theme -> показывает тематические иконки файлов
-GitHub Theme - тема которая мне нравиться: GitHub Dark Default
-Aura Theme - тема которая мне нравиться: Aura Dark(только надо поменять в settings.json цвет папок и файлов из .gitignore на "gitDecoration.ignoredResourceForeground": "#526881", а то их очень плохо видно в родной теме)
-python-string-sql - если в тройных кавычках кода python в первой строке указать --sql то sql код будет подсвечен
+GitHub Theme -> тема которая мне нравиться: GitHub Dark Default
+Aura Theme -> тема которая мне нравиться: Aura Dark(только надо поменять в settings.json цвет папок и файлов из .gitignore на "gitDecoration.ignoredResourceForeground": "#526881", а то их очень плохо видно в родной теме)
+python-string-sql -> если в тройных кавычках кода python в первой строке указать --sql то sql код будет подсвечен
 
 
 Авто дополнение кода:
 Pylance -> MS: это языковой сервер, обеспечивающий быстрый и точный анализ кода для Python. Он использует машинное обучение, чтобы улучшить завершение кода, выдавать диагностику и справочную информацию при наведении на код.
 IntelliCode -> MS: ИИ подсказчик кода(аналог Pylance)
 Path Intellisense -> автоподстановка пути к файлу
-GigaCode - ИИ подсказчик кода от СБЕРа, ставитьия из .vsix файла, ссылка на скачивание: https://gigacode.ru/#/instruction/961d9cc0-98c5-11ee-b9d1-0242ac120002/VSCode
+GigaCode -> ИИ подсказчик кода от СБЕРа, ставитьия из .vsix файла, ссылка на скачивание: https://gigacode.ru/#/instruction/961d9cc0-98c5-11ee-b9d1-0242ac120002/VSCode
 
 
 Авто формат и подсветка кода:
 Prettier - Code formatter -> автоформатирование кода (JavaScript; TypeScript; Flow; JSX; JSON; CSS; SCSS; Less; HTML; Vue; Angular HANDLEBARS; Ember; Glimmer; GraphQL; Markdown; YAML)
-json - Это расширение добавляет поддержку JSON для Visual Studio Code.
+json -> Это расширение добавляет поддержку JSON для Visual Studio Code.
 
 
 Docker:
 Docker -> MS: интеграция vsCode с Docker
 Dev Containers -> MS: Расширение позволяет использовать контейнер Docker в качестве полнофункциональной среды разработки. Независимо от того, выполняете ли вы развертывание в контейнерах или нет, контейнеры представляют собой отличную среду разработки
-YAML - Предоставляет комплексную поддержку языка YAML для Visual Studio Code через yaml-language-server со встроенной поддержкой синтаксиса Kubernetes.
+YAML -> Предоставляет комплексную поддержку языка YAML для Visual Studio Code через yaml-language-server со встроенной поддержкой синтаксиса Kubernetes.
 
 
 Git:
-Git Graph - графическое отображение веток Git
-Git History - История Git, поиск и многое другое (включая git log )
+Git Graph -> графическое отображение веток Git
+Git History -> История Git, поиск и многое другое (включая git log )
 Settings Sync -> синхронизация настроек vsCode с GIT (поищи аналог т.к. данная версия уже не поддерживаеться)
 
 
 WEB:
 Live server -> Локальный WEB-Server
 Live Preview -> MS: Локальный WEB-Server
+Auto Close Tag -> автозакрывает тег, если соответствующий параметр пропиман в settings.json, либо в Windows: Alt+. (для др. ОС см. мануал плагина)
+Auto Rename Tag -> при переименовании одной части тега, прерименовываеться его пара(чтобы это происходило везде в settings.json добавить: "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript", "*"], )
 
 
 Прочее:
@@ -67,7 +69,7 @@ Vscode Google Translate -> перевод текста в vsCode
 Code Spell Checker -> проверка орфографии
 Russian - Code Spell Checker  -> проверка орфографии русский язык(должен установлен Code Spell Checker)
 WSL -> MS: Расширение позволяет использовать VS Code в Windows для создания приложений Linux, которые работают в подсистеме Windows для Linux (WSL).
-Rainbow CSV - поддержка CSV файлов в VS Code
+Rainbow CSV -> поддержка CSV файлов в VS Code
 
 
 --
