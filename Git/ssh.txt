@@ -22,4 +22,8 @@ Host gitlab.com
     HostName gitlab.com
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
 #####  End file  #####
