@@ -92,6 +92,8 @@ Linux:
 Живут по умолчанию:
 Win:
 C:\Users\__UserFolder__\AppData\Roaming\Code\User\settings.json
+либо так:
+%AppData%\Code\User\settings.json
 
 Linux:
 пока неизвестно, ищи в гугле

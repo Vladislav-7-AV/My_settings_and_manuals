@@ -17,6 +17,7 @@
         // Pylance settings END
     "workbench.colorCustomizations": {
         "gitDecoration.ignoredResourceForeground": "#526881",
+        "editorSuggestWidget.selectedBackground": "#704343",
     }, 
     // Настройка конкретной библиотеки в данном случае django
 //    "python.analysis.packageIndexDepths": [

@@ -6,10 +6,12 @@ docker-compose ps — вывести список контейнеров
 docker-compose exec [service name] [command» — выполнить команду в контейнере
 docker-compose images — список образов
 
-Пример для PostgreSQL:
+
+Пример docker-compose.yml для PostgreSQL:
 https://habr.com/ru/articles/823816/
+
 #####Start docker-compose.yml##### 
-#version: '3.9' #Для последней версии docker версию указывать не надо
+#version: '3.9' # Для последней версии docker, версию указывать не надо поэтому она закомменчена
 
 services:
   postgres:

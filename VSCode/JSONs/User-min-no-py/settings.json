@@ -1,0 +1,8 @@
+{
+    "git.autoRepositoryDetection": "subFolders",
+    "breadcrumbs.enabled": true,
+    "workbench.colorCustomizations": {
+        "gitDecoration.ignoredResourceForeground": "#678788",
+        "editorSuggestWidget.selectedBackground": "#704343",
+    }, 
+}
