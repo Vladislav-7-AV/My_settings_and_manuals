@@ -23,6 +23,8 @@ python setup.py install
 3) Обновлениее из репозитория pip:
 pip install --upgrade пакет
 пример: pip install --upgrade pyspark
+Обновить все пакеты разом:
+pip freeze > requirements.txt && pip install -r requirements.txt -U
 
 ---
 Пакетная установка:
